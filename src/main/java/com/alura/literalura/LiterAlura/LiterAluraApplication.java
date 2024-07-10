@@ -14,6 +14,9 @@ public class LiterAluraApplication implements CommandLineRunner {
 	@Autowired
 	private LibroRepository repository;
 
+//	@Autowired
+//	private AutorRepository repositoryAutor;
+
 	public static void main(String[] args) {
 		SpringApplication.run(LiterAluraApplication.class, args);
 	}
@@ -21,6 +24,7 @@ public class LiterAluraApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Principal principal = new Principal(repository);
+		//Principal principalAutor = new Principal(repositoryAutor);
 		principal.muestraElMenu();
 	}
 }

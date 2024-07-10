@@ -9,6 +9,7 @@ public class ConvierteDatos implements IConvierteDatos{
     @Override
     public <T> T obtenerDatos(String json, Class<T> clase) {
         try {
+            //readValue = Lee un json y lo convierte en una clase.
             return objectMapper.readValue(json,clase);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
